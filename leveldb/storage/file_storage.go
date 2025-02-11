@@ -104,7 +104,7 @@ func OpenFile(path string, readOnly bool) (Storage, error) {
 		return nil, err
 	}
 
-	flock, err := newFileLock(filepath.Join(path, "LOCK"), readOnly)
+	flock, err := newFileLock(filepath.Join(path, "LOCK2"), readOnly)
 	if err != nil {
 		return nil, err
 	}
